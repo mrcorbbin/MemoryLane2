@@ -15,10 +15,19 @@ function Game () {
 		{name:"Lotus",count:0,amt:0},
 		{name:"eWorld",count:0,amt:0},
 		{name:"MacOSX",count:0,amt:0},
+		{name:"Evernote",count:0,amt:0},
 		{name:"macos9",count:0,amt:100},
-		{name:"MacOS Mountains n shit",count:0,amt:100}
+		{name:"MacOS Mountains n shit",count:0,amt:100},
+		{name:"MacOS Cirrus",count:0,amt:100},
+		// {name:"MacOS Chesapeake",count:0,amt:100},
+		// {name:"MacOS Bodega",count:0,amt:100},
+		// {name:"MacOS San Pablo",count:0,amt:100},
+		// {name:"MacOS San Pablo",count:0,amt:100},
+		// {name:"MacOS Bahamas",count:0,amt:100},
+		// {name:"MacOS Atoll",count:0,amt:100},
+		// {name:"MacOS Reef",count:0,amt:100},
 	];
-	this.tutorial = false;
+	this.tutorial = true;
 	this.tutorialID = 0;
 	this.updates = [];
 	this.versions = {};
@@ -68,7 +77,7 @@ Game.prototype.createTransaction = function(type,name) {
 };
 
 Game.prototype.getMoney = function() {
-	var money = 1030;
+	var money = 1030; // Base amount
 	var tob = {};
 	for (var i = 0; i < this.transactions.length; i++) {
 		if (!(this.transactions[i].name in tob)){

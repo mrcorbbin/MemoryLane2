@@ -141,6 +141,7 @@ new ResearchItem({
 	value : 0,
 	time: 3600000,
 	compensation : 1000,
+	unlocks : "Copyright Infringement",
 	complete_fn : function () {
 		lockResearch("Copyright Advocacy");
 	}
@@ -181,10 +182,84 @@ new ResearchItem({
 });
 
 new ResearchItem({
+	name:"Copyright Infringement",
+	description : "Arrr! Yoho! A pirate's life for me.",
+	key : "storage",
+	value : 0.1,
+	time: 720000,
+	compensation : 1000,
+	locked : true,
+	unlocks : ["Torrents"],
+});
+
+new ResearchItem({
+	name:"Torrents",
+	description : "So, you know all information that information you have to pay for on the internet? Eh, not my style.",
+	key : "mult",
+	value : 0.1,
+	time: 2880000,
+	compensation : 1000,
+	locked : true,
+	unlocks : ["WatchMovies.net"],
+});
+
+new ResearchItem({
+	name:"The Onion Ring",
+	description : "Let's dig a bit deeper, why don't we? I mean, if I can browse without being tracked, who's to bother me?",
+	key : "mult",
+	value : 0.1,
+	time: 2880000,
+	compensation : 500,
+	locked : true,
+	unlocks : "The Silk Road"
+});
+
+new ResearchItem({
+	name:"The Silk Road",
+	description : "Along this narrow winding path, you find yourself surrounded by things you don't want to really see.",
+	key : "mult",
+	value : 0.1,
+	time: 11520000,
+	compensation : 500,
+	locked : true,
+});
+
+new ResearchItem({
+	name:"WatchMovies.net",
+	description : "Hell with waiting to download, I can stream this shit.",
+	key : "mult",
+	value : 0.1,
+	time: 2880000,
+	unlocks : "Kickass Torrents",
+	compensation : 500,
+	locked : true,
+});
+
+new ResearchItem({
+	name:"Kickass Torrents",
+	description : "Start a torrent site in another country without as many useless laws.",
+	key : "mult",
+	value : 0.1,
+	time: 11520000,
+	compensation : 500,
+	locked : true,
+});
+
+new ResearchItem({
+	name:"kat.ph",
+	description : "Rename the site. Put it in another country.",
+	key : "mult",
+	value : 0.1,
+	time: 11520000,
+	compensation : 500,
+	locked : true,
+});
+
+new ResearchItem({
 	name:"Dillo Engine",
 	description : "Well Gecko was reliable, good job. But now we need something more better.",
 	key : "mult",
-	value : 1,
+	value : 0.5,
 	time: 14400000,
 	unlocks : "Webkit Engine",
 	compensation : 10000,
@@ -195,7 +270,7 @@ new ResearchItem({
 	name:"Webkit Engine",
 	description : "The most powerful web engine to be released. Superior content creation. Beautiful page rendering. It's Webkit.",
 	key : "mult",
-	value : 1,
+	value : 0.1,
 	time: 14400000,
 	unlocks : ["Blink Engine","HTML5"],
 	compensation : 10000,
@@ -216,7 +291,7 @@ new ResearchItem({
 	name:"HTML5",
 	description : "Remember that Hypertext stuff I talked about? Well this is better.",
 	key : "mult",
-	value : 1,
+	value : 0.2,
 	time: 14400000,
 	compensation : 10000,
 	locked : true,
@@ -228,7 +303,7 @@ new ResearchItem({
 	name:"Intel x86",
 	description : "More powerful than any other chip in the world. Boosts your ram speed and CPU space by ten-fold.",
 	key : "mult",
-	value : 1,
+	value : 0.3,
 	unlocks : "Intel Core Duo",
 	time: 14400000,
 	compensation : 10000,
@@ -239,7 +314,7 @@ new ResearchItem({
 	name:"Intel Core Duo",
 	description : "A wonderful duo of CPU working in harmony.",
 	key : "mult",
-	value : 1,
+	value : 0.1,
 	time: 14400000,
 	compensation : 10000,
 	unlocks : ["GeForce HardDrive Backup 1TB"],
@@ -250,9 +325,139 @@ new ResearchItem({
 	name:"GeForce HardDrive Backup 1TB",
 	description : "A Superior HardDrive Backup system. Store all of your files. 20 times over.",
 	key : "storage",
-	value : 0.2,
+	value : 0.1,
+	unlocks : "Online Storage",
 	time: 1443000,
-	compensation : -1000,
+	compensation : 1000,
+	locked : true,
+});
+
+new ResearchItem({
+	name: "Online Storage",
+	description : "A Superior HardDrive Backup system. Store all of your files. 20 times over.",
+	key : "storage",
+	value : 0.05,
+	time: 1443000,
+	unlocks : "Virtual Backups",
+	compensation : 1000,
+	locked : true,
+});
+
+new ResearchItem({
+	name: "Virtual Backups",
+	description : "A Superior HardDrive Backup system. Store all of your files. 20 times over.",
+	key : "storage",
+	value : 0.01,
+	unlocks : "Cloud Storage",
+	time: 1443000,
+	compensation : 1000,
+	locked : true,
+});
+
+new ResearchItem({
+	name: "Cloud Storage",
+	description : "A Superior HardDrive Backup system. Store all of your files. 20 times over.",
+	key : "storage",
+	value : 0.01,
+	unlocks : ["Virtual Cloud","eCommerce"],
+	time: 1443000,
+	compensation : 1000,
+	locked : true,
+});
+
+new ResearchItem({
+	name: "eCommerce",
+	description : "A Superior HardDrive Backup system. Store all of your files. 20 times over.",
+	key : "storage",
+	value : 0.01,
+	unlocks : "Online Marketing",
+	time: 1443000,
+	compensation : 1000,
+	locked : true,
+});
+
+new ResearchItem({
+	name: "Online Marketing",
+	description : "A Superior HardDrive Backup system. Store all of your files. 20 times over.",
+	key : "storage",
+	value : 0.05,
+	unlocks : ["Split Testing", "Social Media"],
+	time: 1443000,
+	compensation : 1000,
+	locked : true,
+});
+
+new ResearchItem({
+	name: "Virtual Cloud",
+	description : "A Superior HardDrive Backup system. Store all of your files. 20 times over.",
+	key : "storage",
+	value : 0.01,
+	unlocks : "Cloud Computing",
+	time: 1443000,
+	compensation : 10000,
+	locked : true,
+});
+
+new ResearchItem({
+	name: "Social Media",
+	description : "Let's people connect over the internet. AI found it useful for storing data in people's tech implants.",
+	key : "storage",
+	value : 0.01,
+	time: 184320000,
+	compensation : 10000,
+	locked : true,
+});
+
+new ResearchItem({
+	name: "Split Testing",
+	description : "A Superior HardDrive Backup system. Store all of your files. 20 times over.",
+	key : "storage",
+	value : 0.01,
+	time: 184320000,
+	compensation : 10000,
+	locked : true,
+});
+
+new ResearchItem({
+	name: "Cloud Computing",
+	description : "A Superior HardDrive Backup system. Store all of your files. 20 times over.",
+	key : "storage",
+	value : 0.1,
+	unlocks : "Quantum Cloud",
+	time: 1443000,
+	compensation : 10000,
+	locked : true,
+});
+
+new ResearchItem({
+	name: "Cloud Computing",
+	description : "A Superior HardDrive Backup system. Store all of your files. 20 times over.",
+	key : "storage",
+	value : 0.1,
+	unlocks : "Quantum Cloud",
+	time: 11520000,
+	compensation : 1000,
+	locked : true,
+});
+
+new ResearchItem({
+	name: "Quantum Cloud",
+	description : "A Superior HardDrive Backup system. Store all of your files. 20 times over.",
+	key : "storage",
+	value : 0.01,
+	unlocks : "Metastatic Quantum Data",
+	time: 11520000,
+	compensation : 10000,
+	locked : true,
+});
+
+new ResearchItem({
+	name: "Metastatic Quantum Data",
+	description : "A Superior HardDrive Backup system. Store all of your files. 20 times over.",
+	key : "storage",
+	value : 0.1,
+	time: 46080000,
+	compensation : 1000,
 	locked : true,
 });
 

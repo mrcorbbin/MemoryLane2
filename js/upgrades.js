@@ -235,10 +235,29 @@ Upgrade.MacOSX = new Upgrade("MacOSX",{
 	},
 	bonus : 452300140,
 })
+Upgrade.Evernote = new Upgrade("Evernote",{
+	size: 10781941304,
+	requires : {
+		macos9 : {
+			min : 10
+		}
+	},
+	bonus : 45300140,
+})
 Upgrade["MacOS Mountains n shit"] = new Upgrade("MacOS Mountains n shit",{
-	size: 43781941304,
+	size: 198781941304,
 	requires : {
 		"MacOSX" : {
+			min : 10
+		}
+	},
+	bonus : 12922100030,
+})
+
+Upgrade["MacOS Cirrus"] = new Upgrade("MacOS Cirrus",{
+	size: 973781941304,
+	requires : {
+		"MacOS Mountains n shit" : {
 			min : 10
 		}
 	},

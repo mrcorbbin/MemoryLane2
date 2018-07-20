@@ -141,6 +141,8 @@ Show only the icons when in mobile. Hide the text. The icons are square.
 
 
 
+
+
 The computer speed should come before modems, so you have to buy new modems when they come out.
 
 
