@@ -1,3 +1,8 @@
+var _TIME = {
+	minute : 60000,
+	hour : 3600000
+}
+
 var RESEARCH = {};
 
 var RESEARCH_LIST = [];
@@ -131,7 +136,38 @@ new ResearchItem({
 	key : "mult",
 	value : 1,
 	time: 3600000,
+	unlocks : "Cable Modem",
 	compensation : 1000
+});
+
+new ResearchItem({
+	name:"Cable Modem",
+	description : "What's better than searching the internet? Searching the internet without someone needing to make a phone call in the middle of a great article!",
+	key : "mult",
+	value : 1,
+	time: _TIME.minute * 55,
+	unlocks : ["Wifi","4G Wireless"],
+	compensation : 1000
+});
+
+new ResearchItem({
+	name:"Wifi",
+	description : "What's better than searching the internet? Searching the internet without someone needing to make a phone call in the middle of a great article!",
+	key : "mult",
+	value : 0.05,
+	time: _TIME.minute * 20,
+	unlocks : "",
+	compensation : 10000
+});
+
+new ResearchItem({
+	name:"4G Wireless",
+	description : "What's better than searching the internet? Searching the internet without someone needing to make a phone call in the middle of a great article!",
+	key : "mult",
+	value : 0.05,
+	time: _TIME.hour * 3,
+	unlocks : "5G",
+	compensation : 10000
 });
 
 new ResearchItem({
@@ -140,7 +176,7 @@ new ResearchItem({
 	key : "mult",
 	value : 0,
 	time: 3600000,
-	compensation : 1000,
+	compensation : 100000,
 	unlocks : "Copyright Infringement",
 	complete_fn : function () {
 		lockResearch("Copyright Advocacy");
@@ -153,7 +189,7 @@ new ResearchItem({
 	key : "mult",
 	value : 0,
 	time: 3600000,
-	compensation : 1000,
+	compensation : 100000,
 	complete_fn : function () {
 		lockResearch("Online Piracy");
 	}
@@ -166,7 +202,7 @@ new ResearchItem({
 	value : 0.1,
 	time: 7200000,
 	locked : true,
-	unlocks : ["Gecko Engine","Intel x86"],
+	unlocks : ["Gecko Engine","Intel x86","Archie Query Form"],
 	compensation : 10000
 });
 
@@ -368,7 +404,7 @@ new ResearchItem({
 new ResearchItem({
 	name: "eCommerce",
 	description : "A Superior HardDrive Backup system. Store all of your files. 20 times over.",
-	key : "storage",
+	key : "mult",
 	value : 0.01,
 	unlocks : "Online Marketing",
 	time: 1443000,
@@ -379,11 +415,11 @@ new ResearchItem({
 new ResearchItem({
 	name: "Online Marketing",
 	description : "A Superior HardDrive Backup system. Store all of your files. 20 times over.",
-	key : "storage",
+	key : "mult",
 	value : 0.05,
 	unlocks : ["Split Testing", "Social Media"],
 	time: 1443000,
-	compensation : 1000,
+	compensation : 11000,
 	locked : true,
 });
 
@@ -430,9 +466,20 @@ new ResearchItem({
 });
 
 new ResearchItem({
-	name: "Cloud Computing",
-	description : "A Superior HardDrive Backup system. Store all of your files. 20 times over.",
+	name: "Archie Query Form",
+	description : "Search over 400 web-sites!",
 	key : "storage",
+	value : 0.1,
+	unlocks : "Quantum Cloud",
+	time: 11520000,
+	compensation : 1000,
+	locked : true,
+});
+
+new ResearchItem({
+	name: "Google",
+	description : "Search anything. The world is at your fingertips",
+	key : "mult",
 	value : 0.1,
 	unlocks : "Quantum Cloud",
 	time: 11520000,
@@ -457,7 +504,7 @@ new ResearchItem({
 	key : "storage",
 	value : 0.1,
 	time: 46080000,
-	compensation : 1000,
+	compensation : 1000000,
 	locked : true,
 });
 
@@ -643,6 +690,3 @@ Click the choose project button to choose the project
 Choosing a project will hide the choose project view, and open up the progress view.
 
 */
-
-
-

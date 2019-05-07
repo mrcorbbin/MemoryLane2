@@ -28,7 +28,7 @@ function Upgrade(name,conf){
 	this.unlock_vn = conf.unlock_vn||null;
 	this.forpreference = conf.pref||"mac";
 	this.sold = false;
-	
+
 	// Store this in the UPGRADES
 
 	UPGRADES[name] = this;
@@ -81,7 +81,7 @@ Upgrade.prototype.checkRequirements = function (reqs) {
 }
 
 Upgrade.prototype.unfade = function () {
-	
+
 }
 
 Upgrade.prototype.timeRemaining = function () {
@@ -127,14 +127,17 @@ Upgrade.prototype.draw = function(delta_t) {
 		$(this.card.card.element).removeClass("faded")
 		this.card.show()
 		$(this.card.title.element).html(this.title + " ver." + this.version);
+		$(this.card.title.element).attr("title", "")
 	}
 	else {
 		$(this.card.title.element).html("????")
+		$(this.card.title.element).attr("title", "Not enough space.")
 	}
 	if (this.version >= this.maxVersion){
 		this.card.upg_btn.disable();
 	}
 	if (this.getPercent() < 1 && this.downloading){
+		$(this.card.title.element).attr("title", "")
 		$(this.card.timeleft.element).html("Ready "+this.timeRemaining());
 		var fromBPS = (GAME.getBPS() / GAME.downloading.length);
 		var fromGen = (GAME.generated / GAME.downloading.length);
@@ -144,6 +147,7 @@ Upgrade.prototype.draw = function(delta_t) {
 		this.card.setProgress(this.current / this.getSize(), this.current, this.getSize());
 	}
 	else if (this.getPercent() >= 1){
+		$(this.card.title.element).attr("title", "")
 		$(this.card.timeleft.element).html("&nbsp;");
 		this.card.endDownload();
 		this.count++;

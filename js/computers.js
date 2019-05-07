@@ -103,12 +103,14 @@ Computer.MacBookPro = new Computer({
 Computer.MacBookPro2013 = new Computer({
 	name : "MacBook Pro 2013",
 	speed : 128083244,
+	price : 400000,
 	description : "16 hours of battery life."
 })
 
 Computer.MacBookPro2020 = new Computer({
 	name : "MacBook Pro 2020",
 	speed : 5120832404,
+	price : 5000000,
 	description : "39 hours of battery life."
 })
 
@@ -116,18 +118,21 @@ Computer.MacBookPro2020 = new Computer({
 Computer.MacSheetPro2028 = new Computer({
 	name : "MacSheet Pro 2028",
 	speed : 78006324040,
+	price : 900000000,
 	description : "7 days of battery life. Paper thin."
 })
 
 Computer.MacSheetPro2032 = new Computer({
 	name : "MacSheet Pro 2032",
 	speed : 345006324040,
+	price : 1491040000,
 	description : "12 days of battery life."
 })
 
 Computer.MacSheetPro2036 = new Computer({
 	name : "MacSheet Pro 2036",
 	speed : 7590006324040,
+	price : 104918499148,
 	description : "2 weeks of battery life."
 })
 

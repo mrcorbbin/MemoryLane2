@@ -3,7 +3,7 @@
 The Game Class
 
 Holds the information such as what's been downloaded
-upgraded, as well as money and 
+upgraded, as well as money and
 
 */
 
@@ -101,7 +101,7 @@ Game.prototype.keyToJSON = function(obj, key){
 }
 
 Game.prototype.setComputer = function () {
-	
+
 }
 
 RESEARCHtoJSON = function() {
@@ -279,6 +279,9 @@ Game.prototype.getBPS = function () {
 	for (var i = 0; i < this.updates.length; i++) {
 		fromUpd += this.updates[i].bonus * this.updates[i].count;
 	};
+	if ((this.bps + fromUpg + fromUpd/this.computer?this.computer.getSpeed():0) > 0.9) {
+		console.log("filling up!")
+	}
 	return Math.min(this.bps + fromUpg + fromUpd,this.computer?this.computer.getSpeed():0) * this.stats.mult;
 }
 
@@ -314,7 +317,7 @@ Draw the game
 
 	this.versions = {};
 	this.versions[this.computer.name] = 1;
-	
+
 	this.downloading = [];
 
 	for (var i = 0; i < this.upgrades.length; i++) {
@@ -347,6 +350,7 @@ Draw the game
 	$("#speed").html(filesize(this.getBPS()) + "/sec")
 	$("#bpc").html(filesize(this.getBPC()) + "/click")
 	$("#money").html("$" + this.money);
+	$("#money_shop").html("$" + this.money);
 
 	this.generated = 0;
 };
