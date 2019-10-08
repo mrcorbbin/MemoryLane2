@@ -15,7 +15,7 @@ lm.PopupMenu.prototype = Object.create(lm.prototype);
 lm.PopupMenu.prototype.getValue = function () {
 	return this.element.value;
 }
-
+ 
 /*
 
 input>string or array
@@ -65,7 +65,7 @@ lm.RecordPopupMenu = function(target,records,key){
 		records : records
 	};
 	if (typeof records){
-		
+
 	}
 	for (var i = 0; i < records.length; i++) {
 		new lm.PopupOption(this,records[i][key],JSON.stringify(records[i]))
@@ -225,5 +225,5 @@ lm.Table.prototype.setRow = function(idx,data){
 	for (var i = 0; i < data.length; i++) {
 	 	console.log(this.rows[idx].children[i])
 	 	this.rows[idx].children[i].setName(data[i]);
-	 }; 
+	 };
 }
